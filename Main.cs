@@ -12,7 +12,6 @@ public class Main : MelonLoader.MelonMod
         AppDomain.CurrentDomain.UnhandledException += HandleException;
         Console.WriteLine("Hello");
     }
-
     private void HandleException(object sender, UnhandledExceptionEventArgs e)
     {
         Logs.Error(e.ExceptionObject.ToString());
@@ -21,12 +20,10 @@ public class Main : MelonLoader.MelonMod
 public class Menu : ModMenu
 {
     public override string MenuName => Main.Name;
-
     public Menu()
     {
         Logo = null; // You can put a sprite here and QuickMenuLib will automatically add it.
     }
-
     public override void OnQuickMenuInitialized()
     {
         var category = MyModMenu.AddMenuCategory("TestModMenuCat");
